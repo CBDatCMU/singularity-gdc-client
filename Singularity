@@ -14,9 +14,10 @@ IncludeCmd: yes
 %post
     /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
     /usr/bin/apt-get update --fix-missing
-    /usr/bin/apt-get install -y curl git
-    mkdir /opt/gdc
-    wget -nc https://gdc.cancer.gov/system/files/authenticated%20user/0/gdc-client_v1.4.0_Ubuntu_x64.zip -d /opt/gdc
+    /usr/bin/apt-get install -y wget unzip
+    mkdir -p /opt/gdc
+    wget -nc https://gdc.cancer.gov/system/files/authenticated%20user/0/gdc-client_v1.4.0_Ubuntu_x64.zip
+    mv -v gdc-client_v1.4.0_Ubuntu_x64.zip /opt/gdc
     cd /opt/gdc/ && unzip /opt/gdc/gdc-client_v1.4.0_Ubuntu_x64.zip && rm -fv gdc-client_v1.4.0_Ubuntu_x64.zip
 
 ####################################################################################
@@ -28,4 +29,4 @@ IncludeCmd: yes
     For more information about gdc-client visit https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
 
 %apprun gdc-client
-    gdc-client "$@"
+    /opt/gdc/gdc-client "$@"
