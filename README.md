@@ -14,6 +14,18 @@ To create the Singularity container, run the command
 bash ./build.sh
 ```
 
+## Example
+
+```
+➜  singularity run --app gdc-client singularity-gdc-client.simg download 22a29915-6712-4f7a-8dba-985ae9a1f005
+
+/tmp/_MEIlzeptb/cryptography/hazmat/primitives/constant_time.py:26: CryptographyDeprecationWarning: Support for your Python version is deprecated. The next version of cryptography will remove support. Please upgrade to a 2.7.x release that supports hmac.compare_digest as soon as possible.
+100% [#############################################################################] Time: 0:00:01   3.16 MB/s
+100% [#############################################################################] Time: 0:00:00 128.94 kB/s
+
+Successfully downloaded: 1
+```
+
 ## Disclaimer
 
 [![Wold you buy me some coffee?](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/icaoberg)
