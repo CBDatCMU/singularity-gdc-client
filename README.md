@@ -19,7 +19,7 @@ bash ./build.sh
 Notice the app name has no hyphen unlike the original tool. This is a workaround from an existing bug in Singularity 3+.
 
 ```
-➜  singularity run --app gdcclient singularity-gdc-client.simg download 22a29915-6712-4f7a-8dba-985ae9a1f005
+➜  singularity run --app gdc-client singularity-gdc-client.simg download 22a29915-6712-4f7a-8dba-985ae9a1f005
 
 /tmp/_MEIlzeptb/cryptography/hazmat/primitives/constant_time.py:26: CryptographyDeprecationWarning: Support for your Python version is deprecated. The next version of cryptography will remove support. Please upgrade to a 2.7.x release that supports hmac.compare_digest as soon as possible.
 100% [#############################################################################] Time: 0:00:01   3.16 MB/s
