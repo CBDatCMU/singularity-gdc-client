@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE=singularity-gdc-client.simg
+IMAGE=ubuntu16.04-gdc-client1.4.0.simg
 DEFINITION=Singularity
 
 if [ -f $IMAGE ]; then
